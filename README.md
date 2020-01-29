@@ -10,19 +10,19 @@ A self-contained Docker environment for WordPress theme development with WP Rig.
 
 3. Run `docker-compose up`. This will build the custom image which powers WP Rig's build process and BrowserSync server, start a container from the image, and run `npm run rig-init` in the `/themes/wprig` directory to initialize the rig. After the rig is initialized, the container will automatically run `npm run dev` to bundle the WP Rig theme for development, watch theme files for changes, and start the BrowserSync server.
 
-4. Browse to (http://localhost:80/)[http://localhost:80/] and complete the traditional WordPress setup procedure.
+4. Browse to [http://localhost:80/](http://localhost:80/) and complete the traditional WordPress setup procedure.
 
 5. Navigate to _Appearance_ > _Themes_ and click the _Activate_ button on the "_WP Rig_" theme.
 
-6. Continue with (the official WP Rig configuration process)[https://github.com/wprig/wprig].
+6. Continue with [the official WP Rig configuration process](https://github.com/wprig/wprig).
 
 ## Usage
 
-You may access the WordPress installation by browsing to (http://localhost:80/)[http://localhost:80/].
+You may access the WordPress installation by browsing to [http://localhost:80/](http://localhost:80/).
 
 _See my note below for the reason why the installation uses port `80`._
 
-For ease of development (and to maintain parity with WP Rig's feature set), this project includes the BrowserSync server which ships with WP Rig. You may access WordPress through BrowserSync by browsing to (http://localhost:8080/)[http://localhost:8080/], or (http://localhost:3001/)[http://localhost:3001/] to access the BrowserSync settings interface.
+For ease of development (and to maintain parity with WP Rig's feature set), this project includes the BrowserSync server which ships with WP Rig. You may access WordPress through BrowserSync by browsing to [http://localhost:8080/](http://localhost:8080/), or [http://localhost:3001/](http://localhost:3001/) to access the BrowserSync settings interface.
 
 ## Cleaning Up
 
