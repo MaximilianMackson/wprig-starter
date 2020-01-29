@@ -1,0 +1,44 @@
+version: '2'
+
+services:
+    wprig:
+        image: wprig
+        build: .
+        ports:
+            - 8080:8080
+            - 3001:3001
+        volumes:
+            - ./themes/wprig:/usr/src/theme
+    wordpress:
+        image: wordpress
+        ports:
+            - 80:80
+        environment:
+            WORDPRESS_DB_HOST: mysql
+            WORDPRESS_DB_USER: test
+            WORDPRESS_DB_PASSWORD: test
+            WORDPRESS_DB_NAME: wordpress
+            WORDPRESS_SITE_URL: 'localhost'
+            WORDPRESS_SITE_DESCRIPTION: 'A starter WordPress installation for developing with WP Rig.'
+            WORDPRESS_ADMIN_USER: test
+            WORDPRESS_ADMIN_PASSWORD: test
+            WORDPRESS_ADMIN_EMAIL: test@test.com
+        volumes:
+            - wordpress:/var/www/html
+            - ./themes/wprig:/var/www/html/wp-content/themes/wprig
+        depends_on:
+            - mysql
+
+    mysql:
+        image: mysql:5.7
+        environment:
+            MYSQL_DATABASE: wordpress
+            MYSQL_USER: test
+            MYSQL_PASSWORD: test
+            MYSQL_RANDOM_ROOT_PASSWORD: '1'
+        volumes:
+            - mysql:/var/lib/mysql
+
+volumes:
+    wordpress:
+    mysql:

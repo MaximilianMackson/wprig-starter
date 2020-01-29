@@ -1,0 +1,9 @@
+{
+  "dev": {
+    "browserSync": {
+      "proxyURL": "wprig-starter_wordpress_1",
+      "bypassPort": 8080,
+      "open": false
+    }
+  }
+}
