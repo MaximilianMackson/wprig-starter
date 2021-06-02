@@ -20,12 +20,7 @@ A progressive theme development rig for WordPress, WP Rig is built to promote th
 Documentation for the WP Rig Open Source Project can be found at the dedicated [Docs](https://github.com/wprig/docs/) repo.
 
 ## Office Hours
-WP Rig office hours take place every other Thursday from 5:30 - 6:30 p.m. UTC, starting January 10, 2019.
-
-Join WP Rig core maintainers to chat about the project, work alongside other devs, discuss ideas, address bugs, and more.
-
-- [View the WP Rig Google Calendar](https://calendar.google.com/calendar/embed?src=wprigio%40gmail.com&ctz=America%2FChicago) to see dates and find info to join the discussion
-- [Subscribe to the WP Rig Google Calendar](https://calendar.google.com/calendar?cid=d3ByaWdpb0BnbWFpbC5jb20) to stay informed.
+WP Rig office hours are on hiatus and not actively scheduled at this time.
 
 ## Installation
 WP Rig has been tested on Linux, Mac, and Windows.
@@ -36,6 +31,9 @@ WP Rig requires the following dependencies. Full installation instructions are p
 - [PHP](http://php.net/) 7.0
 - [npm](https://www.npmjs.com/)
 - [Composer](https://getcomposer.org/) (installed globally)
+
+### WP Rig and child themes
+WP Rig is built to lay a solid theme foundation, which is great for a parent theme, but not for a child theme. A child theme is meant to only add on or modify the foundation. As such, WP Rig is not intended for making child themes to extend any themes, whether they were originally built with WP Rig or not.
 
 ### How to install WP Rig:
 1. Clone or download this repository to the themes folder of a WordPress site on your development environment.
