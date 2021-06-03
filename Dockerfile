@@ -1,6 +1,6 @@
 FROM ubuntu:21.04
 
-ENV TZ=Europe/Bucharest
+ENV TZ=America/New_York
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get update -y \
